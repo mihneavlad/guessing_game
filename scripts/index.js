@@ -29,12 +29,12 @@ function guessingGame(){
   }
 
   // If you guessed within 3 attempts...
-  if(guess === numberToGuess && count < 3){
+  if(guess === numberToGuess && count <= 3){
     // ... print the success message
-    alert(`Success: the number is indeed ${numberToGuess}. You got the number correctly after ${count} attempts.`);
+    document.getElementById('result').innerText = `Success: the number is indeed ${numberToGuess}. You got the number correctly after ${count} attempts.`;
   } else {
     // Otherwise print that the game is over
-    alert(`Sorry human, but you couldn't guess the number in less than three times. The number was ${numberToGuess}`);
+    document.getElementById('result').innerText = `Sorry human, but you couldn't guess the number in less than three times. The number was ${numberToGuess}. ${numberToGuess}`;
   }
 }
 
